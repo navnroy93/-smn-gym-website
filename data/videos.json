@@ -1,0 +1,42 @@
+[
+  {
+    "id": "vid_1791741467962",
+    "title": "I am doing my best",
+    "category": "Strength Training",
+    "description": "Testing the video feature",
+    "src": "/uploads/videos/1791741466874-I___M_DOING_MY_BEST______Reggae_Affirmation_Song___Let_Go_of_Stress___Find_Inner_Peace.mp4",
+    "thumbnail": "assets/gym_interior_1.jpg",
+    "uploadedAt": "11 Oct 2026",
+    "isDefault": false
+  },
+  {
+    "id": "vid_1",
+    "title": "Heavy Strength & Squat Technique",
+    "category": "Strength Training",
+    "description": "Proper bar placement, foot stance, and explosive leg drive at SMN GYM.",
+    "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "thumbnail": "assets/gym_weights.jpg",
+    "uploadedAt": "Demo Workout",
+    "isDefault": true
+  },
+  {
+    "id": "vid_2",
+    "title": "High-Energy Cardio & Endurance Decks",
+    "category": "Cardio & Stamina",
+    "description": "Interval pacing and stamina building on commercial running decks.",
+    "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "thumbnail": "assets/gym_cardio.jpg",
+    "uploadedAt": "Demo Workout",
+    "isDefault": true
+  },
+  {
+    "id": "vid_3",
+    "title": "Cable Crossover & Muscle Isolation",
+    "description": "Chest flyes and lat contraction for sculpted definition and hypertrophy.",
+    "category": "Functional & Cable",
+    "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
+    "thumbnail": "assets/gym_interior_1.jpg",
+    "uploadedAt": "Demo Workout",
+    "isDefault": true
+  }
+]

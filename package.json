@@ -1,0 +1,24 @@
+{
+  "name": "smn-gym-website",
+  "version": "1.0.0",
+  "description": "SMN GYM - Premium Dynamic Website with AI Gym Bot, WhatsApp connect, and Excel Lead registration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "gym",
+    "fitness",
+    "smn-gym",
+    "lead-generation",
+    "whatsapp"
+  ],
+  "author": "SMN GYM",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMN GYM | Premium Fitness & Strength Training Center</title>
+  <meta name="description" content="Experience elite fitness at SMN GYM. State-of-the-art cardio, heavy strength equipment, certified trainers, and personalized transformation plans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-announcement">
+        <span class="badge">LIMITED OFFER</span>
+        <span>🔥 Join today and get a <strong>FREE 1-Day Trial Pass</strong> & Personalized Fitness Assessment!</span>
+      </div>
+      <div class="top-contact">
+        <a href="tel:8892152766"><i class="fa-solid fa-phone"></i> +91 8892152766</a>
+        <span class="divider">|</span>
+        <button class="top-wa-btn" onclick="openWhatsAppModal()">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="logo-text">
+          <span class="brand-title">SMN GYM</span>
+          <span class="brand-tagline">STRENGTH & FITNESS</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#facilities" class="nav-item">Facilities</a>
+        <a href="#videos" class="nav-item">Workout Videos</a>
+        <a href="#plans" class="nav-item">Plans & Pricing</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#register" class="nav-item">Register</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn btn-outline" onclick="openWhatsAppModal()">
+          <i class="fa-brands fa-whatsapp"></i> Owner WhatsApp
+        </button>
+        <a href="#register" class="btn btn-primary pulse-btn">Join Now</a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-fire"></i> PREMIER WORKOUT DESTINATION
+      </div>
+      <h1 class="hero-title">
+        TRANSFORM YOUR BODY. <br>
+        <span class="gradient-text">ELEVATE YOUR LIFE.</span>
+      </h1>
+      <p class="hero-subtitle">
+        "Every day is a fresh start — Keep it strong." Experience elite cardio machines, comprehensive heavy strength stations, certified coaching, and motivating community at <strong>SMN GYM</strong>.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#register" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-bolt"></i> Register For Free Trial
+        </a>
+        <button class="btn btn-glass btn-lg" onclick="openWhatsAppModal('Hello! I would like to know more about SMN GYM membership and offers.')">
+          <i class="fa-brands fa-whatsapp text-success"></i> WhatsApp Inquiry
+        </button>
+        <button class="btn btn-dark-outline btn-lg" onclick="openGymBot()">
+          <i class="fa-solid fa-robot"></i> Ask Gym Bot
+        </button>
+      </div>
+
+      <!-- Live Highlights Grid -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">Cardio & HIIT</span>
+            <span class="stat-label">Treadmills, Ellipticals, Cycles</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">Heavy Strength</span>
+            <span class="stat-label">Squat Racks, Leg Press, Free Weights</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-ninja"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">Expert Trainers</span>
+            <span class="stat-label">Personalized Diet & Training</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">Flexible Timings</span>
+            <span class="stat-label">Morning & Evening Batches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="grid-2 align-center">
+        <div class="about-image-wrap">
+          <img src="assets/gym_interior_1.jpg" alt="SMN Gym Interior" class="about-img main-img">
+          <div class="floating-badge">
+            <i class="fa-solid fa-medal"></i>
+            <div>
+              <strong>Premium Floor</strong>
+              <span>Wooden finish, spacious & fully equipped</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="sub-heading">WELCOME TO SMN GYM</span>
+          <h2 class="section-title">Where Dedication Meets World-Class Training</h2>
+          <p class="lead-text">
+            At SMN GYM, we believe that fitness is a lifestyle, not a chore. Our newly designed facility provides a clean, energized, and supportive atmosphere for beginners and athletes alike.
+          </p>
+          <ul class="feature-checklist">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Spacious & Hygienic Floor:</strong>
+                <p>Clean wooden flooring, mirrored wall workout bays, and high-efficiency ventilation.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Complete Range of Modern Machinery:</strong>
+                <p>From advanced cardio decks to multi-station cable machines, leg press, and bench presses.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Tailored Transformation Programs:</strong>
+                <p>Weight loss, muscle gain, functional conditioning, and customized meal strategies.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#register" class="btn btn-primary">Start Your Journey Today</a>
+            <button class="btn btn-outline" onclick="openWhatsAppModal('Hi! Can I visit SMN Gym today for a facility walkthrough?')">
+              <i class="fa-solid fa-location-dot"></i> Schedule Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="section facilities-section bg-darker" id="facilities">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">FACILITIES & EQUIPMENT</span>
+        <h2 class="section-title">Built For Results. Equipped For Champions.</h2>
+        <p class="section-desc">Take a look at the workout zones designed to push your boundaries safely and effectively.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <!-- Card 1: Cardio -->
+        <div class="facility-card">
+          <div class="facility-img-wrap">
+            <img src="assets/gym_cardio.jpg" alt="Cardio Zone">
+            <span class="facility-tag">CARDIO ARENA</span>
+          </div>
+          <div class="facility-body">
+            <h3>Cardio & Stamina Zone</h3>
+            <p>High-end motorized treadmills, spin bikes, and cross-trainers overlooking open glass windows for natural light and focus.</p>
+            <ul class="facility-list">
+              <li><i class="fa-solid fa-check"></i> Commercial Running Decks</li>
+              <li><i class="fa-solid fa-check"></i> Elliptical Cross Trainers</li>
+              <li><i class="fa-solid fa-check"></i> Calorie & Heart-Rate Monitors</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Strength -->
+        <div class="facility-card">
+          <div class="facility-img-wrap">
+            <img src="assets/gym_weights.jpg" alt="Strength & Heavy Weights">
+            <span class="facility-tag">STRENGTH ZONE</span>
+          </div>
+          <div class="facility-body">
+            <h3>Heavy Strength & Iron Zone</h3>
+            <p>Target every muscle group with dedicated Olympic squat racks, incline/flat benches, 45-degree leg press, and dumbbell racks.</p>
+            <ul class="facility-list">
+              <li><i class="fa-solid fa-check"></i> Heavy-Duty Leg Press & Hack Squat</li>
+              <li><i class="fa-solid fa-check"></i> Wide Selection of Free Weights</li>
+              <li><i class="fa-solid fa-check"></i> Shock-Absorbing Rubberized Flooring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Cables & Functional -->
+        <div class="facility-card">
+          <div class="facility-img-wrap">
+            <img src="assets/gym_interior_1.jpg" alt="Cable Crossovers & Machines">
+            <span class="facility-tag">FUNCTIONAL & CABLE</span>
+          </div>
+          <div class="facility-body">
+            <h3>Cable Machines & Functional Area</h3>
+            <p>Dual cable crossover pulleys, lat pulldowns, seated cable rows, and bodyweight pull-up stations for isolated muscle sculpting.</p>
+            <ul class="facility-list">
+              <li><i class="fa-solid fa-check"></i> Multi-Cable Functional Trainers</li>
+              <li><i class="fa-solid fa-check"></i> Aerobic Steppers & Medicine Balls</li>
+              <li><i class="fa-solid fa-check"></i> Full Mirror Wall for Proper Form</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- WORKOUT VIDEOS SECTION (Sequential Player)    -->
+  <!-- ============================================== -->
+  <section class="section videos-section" id="videos">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="sub-heading">LIVE WORKOUT SESSIONS</span>
+          <h2 class="section-title">Train In Action at SMN GYM</h2>
+          <p class="section-desc">Watch our training videos auto-playing in continuous sequence. Master proper gym form, intensity, and techniques.</p>
+        </div>
+        <div class="header-action-wrap">
+          <button class="btn btn-outline owner-upload-btn" onclick="openUploadModal()">
+            <i class="fa-solid fa-lock text-gold"></i>
+            <span>Owner: Upload Video</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="video-player-container">
+        <!-- Main Video Screen -->
+        <div class="video-screen-card">
+          <div class="video-wrapper">
+            <video id="gymVideoPlayer" playsinline preload="metadata">
+              Your browser does not support HTML5 video.
+            </video>
+            
+            <!-- Video Overlay Badges -->
+            <div class="video-top-overlay">
+              <span class="now-playing-badge" id="videoCategoryBadge">Strength Training</span>
+              <span class="sequence-indicator" id="sequenceBadge">
+                <i class="fa-solid fa-repeat"></i> Auto-Sequence: Video 1 of 3
+              </span>
+            </div>
+
+            <!-- Big Center Play Button (when paused) -->
+            <div class="video-center-btn" id="centerPlayBtn" onclick="togglePlayPause()">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+
+          <!-- Video Title & Details -->
+          <div class="video-details-bar">
+            <div>
+              <h3 id="currentVideoTitle">Heavy Strength &amp; Squat Technique</h3>
+              <p id="currentVideoDesc">Proper bar placement, foot stance, and explosive leg drive at SMN GYM.</p>
+            </div>
+            <div class="video-badge-pill" id="currentVideoMeta">
+              <i class="fa-solid fa-film text-gold"></i> <span id="currentVideoDate">Official SMN Workout</span>
+            </div>
+          </div>
+
+          <!-- Custom Interactive Video Controls -->
+          <div class="custom-video-controls">
+            <!-- Progress Bar -->
+            <div class="video-progress-container" id="videoProgressContainer" onclick="seekVideo(event)">
+              <div class="video-progress-bar" id="videoProgressBar"></div>
+            </div>
+
+            <div class="controls-buttons-row">
+              <div class="controls-left">
+                <!-- Previous Button -->
+                <button class="control-btn" onclick="prevVideo()" title="Previous Video in Sequence" aria-label="Previous Video">
+                  <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <!-- Play / Pause Button -->
+                <button class="control-btn play-pause-btn" id="playPauseBtn" onclick="togglePlayPause()" title="Play / Pause" aria-label="Play / Pause">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+
+                <!-- Next Button -->
+                <button class="control-btn" onclick="nextVideo()" title="Next Video in Sequence" aria-label="Next Video">
+                  <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+                <!-- Time Display -->
+                <span class="video-time-display" id="videoTimeDisplay">0:00 / 0:00</span>
+              </div>
+
+              <div class="controls-right">
+                <!-- Volume / Mute Button & Slider -->
+                <div class="volume-control-wrap">
+                  <button class="control-btn" id="volumeMuteBtn" onclick="toggleMute()" title="Mute / Unmute" aria-label="Mute / Unmute">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                  <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="changeVolume(this.value)">
+                </div>
+
+                <!-- Fullscreen Button -->
+                <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen" aria-label="Fullscreen">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Playlist Drawer -->
+        <div class="video-playlist-card">
+          <div class="playlist-header">
+            <h4><i class="fa-solid fa-list-ul text-gold"></i> Workout Sequence</h4>
+            <span class="playlist-count" id="playlistCount">3 Videos</span>
+          </div>
+
+          <div class="playlist-items-list" id="playlistItemsList">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Plans Section -->
+  <section class="section plans-section" id="plans">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">MEMBERSHIP PACKAGES</span>
+        <h2 class="section-title">Transparent & Affordable Plans</h2>
+        <p class="section-desc">Choose the plan that suits your schedule. Every membership includes full floor and cardio access.</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- 1 Month -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Monthly Pass</h3>
+            <p class="plan-desc">Perfect for testing our gym floor and establishing a consistent workout habit.</p>
+            <div class="plan-price">
+              <span class="currency">₹</span><span class="amount">1,000</span><span class="period">/ month</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Complete Gym & Cardio Access</li>
+            <li><i class="fa-solid fa-check"></i> Locker & Changing Room Facility</li>
+            <li><i class="fa-solid fa-check"></i> General Trainer Assistance</li>
+            <li><i class="fa-solid fa-check"></i> Free Drinking Water & Facilities</li>
+          </ul>
+          <button class="btn btn-outline full-width" onclick="selectPlan('1 Month Standard')">
+            Choose Monthly
+          </button>
+        </div>
+
+        <!-- 3 Months (Featured) -->
+        <div class="plan-card popular">
+          <div class="plan-badge">MOST POPULAR</div>
+          <div class="plan-header">
+            <h3>Quarterly (3 Months)</h3>
+            <p class="plan-desc">Our recommended transformation plan to build visible muscle and burn stubborn fat.</p>
+            <div class="plan-price">
+              <span class="currency">₹</span><span class="amount">2,500</span><span class="period">/ 3 months</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> <strong>Everything in Monthly</strong></li>
+            <li><i class="fa-solid fa-check"></i> Body Composition & BMI Analysis</li>
+            <li><i class="fa-solid fa-check"></i> Basic Diet & Calorie Chart</li>
+            <li><i class="fa-solid fa-check"></i> Trainer Guidance for Form Correction</li>
+            <li><i class="fa-solid fa-check"></i> Save ₹500 vs monthly renewal</li>
+          </ul>
+          <button class="btn btn-primary full-width" onclick="selectPlan('3 Months Transformation')">
+            Get Quarterly Plan
+          </button>
+        </div>
+
+        <!-- 1 Year Annual -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Annual VIP (12 Months)</h3>
+            <p class="plan-desc">Maximum savings for long-term health and serious bodybuilders.</p>
+            <div class="plan-price">
+              <span class="currency">₹</span><span class="amount">8,000</span><span class="period">/ year</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> <strong>Full 365 Days Unlimited Access</strong></li>
+            <li><i class="fa-solid fa-check"></i> Free 1-Month Membership Pause</li>
+            <li><i class="fa-solid fa-check"></i> Customized Nutrition Plan</li>
+            <li><i class="fa-solid fa-check"></i> Free SMN Gym Workout Bag & Shaker</li>
+            <li><i class="fa-solid fa-check"></i> Priority Trainer Support</li>
+          </ul>
+          <button class="btn btn-outline full-width" onclick="selectPlan('12 Months Annual VIP')">
+            Choose Annual
+          </button>
+        </div>
+
+        <!-- Personal Training -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Personal Coaching (PT)</h3>
+            <p class="plan-desc">Dedicated 1-on-1 certified trainer to keep you accountable and accelerate results.</p>
+            <div class="plan-price">
+              <span class="currency">₹</span><span class="amount">Custom</span><span class="period">/ package</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Dedicated 1-on-1 Certified Coach</li>
+            <li><i class="fa-solid fa-check"></i> Custom Weekly Workout Splits</li>
+            <li><i class="fa-solid fa-check"></i> Precise Macro & Meal Breakdown</li>
+            <li><i class="fa-solid fa-check"></i> Daily Accountability & WhatsApp check-in</li>
+          </ul>
+          <button class="btn btn-outline full-width" onclick="openWhatsAppModal('Hello! I would like to inquire about Personal Training (1-on-1 coach) packages and fees at SMN Gym.')">
+            Inquire on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Member Registration Section -->
+  <section class="section register-section" id="register">
+    <div class="container">
+      <div class="register-card-grid">
+        <div class="register-info">
+          <span class="sub-heading">JOIN SMN GYM TODAY</span>
+          <h2 class="section-title">Start Your Free Trial Or Register Online</h2>
+          <p>
+            Fill out the quick form below. Your registration will be saved instantly to our member records, and our team will get in touch with you to schedule your orientation and free workout!
+          </p>
+
+          <div class="trust-points">
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-halved text-gold"></i>
+              <div>
+                <strong>Zero Joining Pressure</strong>
+                <span>Visit our floor, see the equipment, and decide.</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-person-chalkboard text-gold"></i>
+              <div>
+                <strong>Complimentary Trainer Consultation</strong>
+                <span>Free fitness assessment & posture evaluation.</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-brands fa-whatsapp text-success"></i>
+              <div>
+                <strong>Instant WhatsApp Updates</strong>
+                <span>Connect directly with owner at 8892152766.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="registration-perk-box">
+            <i class="fa-solid fa-gift text-gold"></i>
+            <div>
+              <strong>Bonus Welcome Perk:</strong>
+              <span>Get a complimentary 1-on-1 Fitness Assessment &amp; Diet Consultation on your first visit!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="register-form-box">
+          <div class="form-header">
+            <h3><i class="fa-solid fa-user-plus text-gold"></i> Member Registration Form</h3>
+            <p>Takes less than 30 seconds</p>
+          </div>
+
+          <form id="registrationForm" onsubmit="handleRegistration(event)">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="fullName" name="name" placeholder="e.g. Rahul Sharma" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mobileNo">Mobile Number <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" id="mobileNo" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddr">Email Address</label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="emailAddr" name="email" placeholder="e.g. rahul@gmail.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fitnessGoal">Your Primary Goal</label>
+                <select id="fitnessGoal" name="goal">
+                  <option value="Weight Loss & Fat Burn">Weight Loss & Fat Burn</option>
+                  <option value="Muscle Building & Strength" selected>Muscle Building & Strength</option>
+                  <option value="General Fitness & Stamina">General Fitness & Stamina</option>
+                  <option value="Body Transformation">Complete Transformation</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredPlan">Selected Plan</label>
+                <select id="preferredPlan" name="plan">
+                  <option value="1 Month Standard">1 Month Standard</option>
+                  <option value="3 Months Transformation" selected>3 Months Transformation</option>
+                  <option value="12 Months Annual VIP">12 Months Annual VIP</option>
+                  <option value="Personal Training (1-on-1)">Personal Training (1-on-1)</option>
+                  <option value="Free 1-Day Trial">Free 1-Day Trial</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary full-width" id="registerSubmitBtn">
+              <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Submit Registration</span>
+              <span class="spinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Saving...</span>
+            </button>
+
+            <!-- Success / Error Status Banner -->
+            <div id="formStatus" class="form-status" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery-section bg-darker" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">PHOTO GALLERY</span>
+        <h2 class="section-title">Step Inside SMN GYM</h2>
+        <p class="section-desc">Real photos of our spacious gym floor, branded wooden accents, and state-of-the-art machinery.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/gym_interior_1.jpg" alt="SMN Gym Main Floor">
+          <div class="gallery-overlay">
+            <h4>Main Training Floor</h4>
+            <span>SMN GYM signature wooden wall & cable stations</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gym_cardio.jpg" alt="SMN Gym Cardio Area">
+          <div class="gallery-overlay">
+            <h4>Cardio Lineup</h4>
+            <span>Treadmills, ellipticals, cycling, and mats</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gym_weights.jpg" alt="SMN Gym Heavy Strength & Squat Zone">
+          <div class="gallery-overlay">
+            <h4>Free Weights & Machines</h4>
+            <span>Leg press, benches, pull-up stations & dumbbell bays</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timings, Location & QR Code Section -->
+  <section class="section timings-section" id="contact">
+    <div class="container">
+      <div class="grid-2 align-center">
+        <div class="timings-info">
+          <span class="sub-heading">VISIT & CONTACT</span>
+          <h2 class="section-title">Gym Timings & Location</h2>
+          
+          <div class="timing-cards">
+            <div class="time-card">
+              <div class="time-card-icon"><i class="fa-solid fa-sun text-gold"></i></div>
+              <div class="time-card-content">
+                <strong>Morning Batch (Mon – Sat)</strong>
+                <p>05:30 AM – 10:30 AM</p>
+              </div>
+            </div>
+
+            <div class="time-card">
+              <div class="time-card-icon"><i class="fa-solid fa-moon text-gold"></i></div>
+              <div class="time-card-content">
+                <strong>Evening Batch (Mon – Sat)</strong>
+                <p>04:30 PM – 10:00 PM</p>
+              </div>
+            </div>
+
+            <div class="time-card">
+              <div class="time-card-icon"><i class="fa-solid fa-calendar-check text-gold"></i></div>
+              <div class="time-card-content">
+                <strong>Sunday Workout Session</strong>
+                <p>06:00 AM – 12:00 PM (Morning Special)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-details-box">
+            <div class="contact-item">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <div>
+                <strong>Direct Call & Enquiries:</strong>
+                <a href="tel:8892152766">+91 8892152766</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp text-success"></i>
+              <div>
+                <strong>Official WhatsApp:</strong>
+                <a href="javascript:void(0)" onclick="openWhatsAppModal()">+91 8892152766 (Click to Chat)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scan to Connect / QR Code Card -->
+        <div class="qr-card">
+          <div class="qr-card-inner">
+            <span class="qr-tag">SCAN & CONNECT</span>
+            <h3>Scan QR Code On Mobile</h3>
+            <p>Scan using your phone camera for fast access, contact details, or gym info.</p>
+            <div class="qr-image-wrap">
+              <img src="assets/qr_code.png" alt="SMN Gym QR Code" class="qr-img">
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openWhatsAppModal()">
+              <i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp Directly
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <div class="logo-text">
+            <span class="brand-title">SMN GYM</span>
+            <span class="brand-tagline">STRENGTH & FITNESS</span>
+          </div>
+        </div>
+        <p>"Every day is a fresh start — Remember why you started." Premium fitness, certified trainers, and world-class equipment.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Gym</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#plans">Membership Plans</a></li>
+          <li><a href="#register">Register Lead</a></li>
+          <li><a href="#contact">Timings & Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Owner</h4>
+        <p><i class="fa-solid fa-phone text-gold"></i> +91 8892152766</p>
+        <p><i class="fa-brands fa-whatsapp text-success"></i> +91 8892152766</p>
+        <div class="footer-cta">
+          <button class="btn btn-primary btn-sm" onclick="openWhatsAppModal()">
+            <i class="fa-brands fa-whatsapp"></i> Chat Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>© 2026 SMN GYM. All Rights Reserved. Strength • Fitness • Transformation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODAL: Owner Workout Video Upload              -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="uploadModal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="wa-icon-circle" style="background: var(--primary-gold);"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <div>
+            <h3>Owner Video Upload</h3>
+            <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-solid fa-shield"></i> Restricted to Gym Owner</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeUploadModal()">&times;</button>
+      </div>
+
+      <form id="ownerUploadForm" onsubmit="handleVideoUpload(event)">
+        <div class="modal-body">
+          <!-- Owner PIN Verification -->
+          <div class="wa-field-group">
+            <label for="ownerPinInput">Owner Security PIN <span class="required">*</span></label>
+            <div class="input-icon-wrap">
+              <i class="fa-solid fa-key"></i>
+              <input type="password" id="ownerPinInput" placeholder="Enter owner PIN" required>
+            </div>
+            <small class="wa-help-text">Only the gym owner with the PIN can upload new workout videos.</small>
+          </div>
+
+          <div class="wa-field-group">
+            <label for="videoTitleInput">Workout Video Title <span class="required">*</span></label>
+            <input type="text" id="videoTitleInput" class="custom-modal-input" placeholder="Workout video title" required>
+          </div>
+
+          <div class="form-row">
+            <div class="wa-field-group">
+              <label for="videoCategorySelect">Category</label>
+              <select id="videoCategorySelect" class="custom-modal-input">
+                <option value="Strength Training">Strength Training</option>
+                <option value="Cardio & Stamina">Cardio &amp; Stamina</option>
+                <option value="Functional & Cable">Functional &amp; Cable</option>
+                <option value="Transformation">Transformation</option>
+                <option value="Trainer Guidance">Trainer Guidance</option>
+              </select>
+            </div>
+
+            <div class="wa-field-group">
+              <label for="videoFileInput">Choose Video File <span class="required">*</span></label>
+              <input type="file" id="videoFileInput" accept="video/mp4,video/webm,video/ogg,video/quicktime,video/x-m4v" required>
+            </div>
+          </div>
+
+          <div class="wa-field-group">
+            <label for="videoDescInput">Short Description</label>
+            <textarea id="videoDescInput" rows="2" class="custom-modal-input" placeholder="Tips, form cues, or workout motivation for members..."></textarea>
+          </div>
+
+          <!-- Upload Status & Progress -->
+          <div id="uploadStatusBanner" class="form-status" style="display: none;"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeUploadModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="uploadSubmitBtn">
+            <span class="btn-text"><i class="fa-solid fa-cloud-arrow-up"></i> Upload &amp; Add to Playlist</span>
+            <span class="spinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Uploading...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: Custom WhatsApp Chat (As Requested)     -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="waModal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="wa-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <h3>Chat on WhatsApp</h3>
+            <span class="online-indicator"><span class="dot"></span> SMN GYM Owner Available</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeWhatsAppModal()" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="wa-field-group">
+          <label>To:</label>
+          <div class="wa-recipient-box">
+            <i class="fa-solid fa-user-shield text-gold"></i>
+            <span>SMN GYM Owner: <strong>+91 8892152766</strong></span>
+          </div>
+        </div>
+
+        <div class="wa-quick-chips">
+          <span>Quick Messages:</span>
+          <div class="chip-container">
+            <button type="button" class="chip" onclick="setWAMessage('Hi! I want to know about membership fees and current offers at SMN Gym.')">💰 Membership Fees</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hello! Can I book a 1-day free trial workout pass?')">🔥 Free Trial Pass</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hi, I am looking for a Personal Trainer for weight loss / muscle building.')">🏋️ Personal Training</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hello! What are your gym timings today?')">⏰ Gym Timings</button>
+          </div>
+        </div>
+
+        <div class="wa-field-group">
+          <div class="label-with-counter">
+            <label for="waMessageText">Your Message:</label>
+            <span class="char-counter" id="waCharCount">0 / 1000</span>
+          </div>
+          <textarea 
+            id="waMessageText" 
+            rows="5" 
+            maxlength="1000" 
+            placeholder="Type your message here... (e.g., Hello, I want to join SMN Gym. Please share details.)"
+            oninput="handleWAMessageInput(this)"></textarea>
+          <small class="wa-help-text">Clicking 'Send Message' will open WhatsApp Web or your WhatsApp App with this message pre-typed to 8892152766.</small>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeWhatsAppModal()">Cancel</button>
+        <button type="button" class="btn btn-whatsapp" onclick="sendWhatsAppMessage()">
+          <i class="fa-solid fa-paper-plane"></i> Send to WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- FLOATING ACTION BUTTON: WhatsApp (Bottom Left) -->
+  <!-- ============================================== -->
+  <button class="floating-wa-btn" id="floatingWaBtn" onclick="openWhatsAppModal()" title="Chat with SMN Gym Owner on WhatsApp">
+    <div class="wa-btn-content">
+      <i class="fa-brands fa-whatsapp wa-main-icon"></i>
+      <span class="wa-btn-text">Chat on WhatsApp</span>
+    </div>
+  </button>
+
+  <!-- ============================================== -->
+  <!-- GYM INFORMATION BOT: SMN Fitness Bot (Right)   -->
+  <!-- ============================================== -->
+  <div class="gym-bot-wrapper" id="gymBotWrapper">
+    <!-- Floating Bot Button -->
+    <button class="bot-trigger-btn" id="botTriggerBtn" onclick="toggleGymBot()" title="Ask SMN Gym Bot">
+      <div class="bot-avatar">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+      <div class="bot-badge-text">
+        <span>Gym Assistant</span>
+        <small class="online-status">Online</small>
+      </div>
+      <span class="bot-pulse"></span>
+    </button>
+
+    <!-- Bot Chat Window -->
+    <div class="bot-window" id="botWindow" style="display: none;">
+      <div class="bot-window-header">
+        <div class="bot-header-info">
+          <div class="bot-header-avatar">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <div>
+            <h4>SMN Gym Bot</h4>
+            <span class="bot-sub"><span class="dot"></span> Instant Gym Information</span>
+          </div>
+        </div>
+        <button class="bot-close-btn" onclick="toggleGymBot()">&times;</button>
+      </div>
+
+      <!-- Quick Topic Chips -->
+      <div class="bot-topic-chips">
+        <button onclick="askBotQuestion('What are the gym timings?')">⏰ Timings</button>
+        <button onclick="askBotQuestion('What are the membership fees and plans?')">💳 Pricing</button>
+        <button onclick="askBotQuestion('What equipment is available?')">🏋️ Equipment</button>
+        <button onclick="askBotQuestion('Is personal training available?')">💪 Personal Trainer</button>
+        <button onclick="askBotQuestion('Can I get a 1-day free trial?')">🎟️ Free Trial</button>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div class="bot-messages" id="botMessages">
+        <div class="bot-msg incoming">
+          <div class="bot-bubble">
+            👋 Welcome to <strong>SMN GYM</strong>! I'm your virtual gym assistant. You can ask me anything about our <strong>timings, membership fees, cardio & weight machines, personal trainers, or free trials</strong>!
+          </div>
+          <span class="msg-time">Just now</span>
+        </div>
+      </div>
+
+      <!-- Bot Input Area -->
+      <form class="bot-input-area" onsubmit="handleBotSubmit(event)">
+        <input 
+          type="text" 
+          id="botInput" 
+          placeholder="Ask anything about SMN Gym..." 
+          autocomplete="off">
+        <button type="submit" class="bot-send-btn" aria-label="Send question">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
