@@ -385,6 +385,92 @@ ul {
   color: #ffffff;
   font-size: 1.3rem;
   box-shadow: var(--shadow-gold);
+  position: relative;
+  overflow: hidden;
+  animation: logoBadgePulse 3s infinite ease-in-out;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+/* Subtle continuous energy sheen across the logo badge */
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 65%
+  );
+  transform: rotate(25deg) translateY(-120%);
+  animation: logoSheen 3.5s infinite;
+  pointer-events: none;
+}
+
+/* Dynamic lifting motion for the dumbbell icon */
+.logo-icon i {
+  display: inline-block;
+  animation: dumbbellMotion 2.4s infinite ease-in-out;
+  transform-origin: center center;
+  z-index: 2;
+}
+
+/* Interactive hover: energetic flex & lift */
+.logo:hover .logo-icon {
+  transform: scale(1.1) rotate(-4deg);
+  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.55);
+}
+
+.logo:hover .logo-icon i {
+  animation: dumbbellCurl 0.75s ease-in-out;
+}
+
+@keyframes dumbbellMotion {
+  0% {
+    transform: rotate(0deg) translateY(0) scale(1);
+  }
+  20% {
+    transform: rotate(-18deg) translateY(-2px) scale(1.08); /* Lift & curl */
+  }
+  40% {
+    transform: rotate(14deg) translateY(-3px) scale(1.12); /* Peak rep contraction */
+  }
+  60% {
+    transform: rotate(-8deg) translateY(-1px) scale(1.04); /* Lowering weight */
+  }
+  80% {
+    transform: rotate(4deg) translateY(0) scale(1); /* Reset */
+  }
+  100% {
+    transform: rotate(0deg) translateY(0) scale(1);
+  }
+}
+
+@keyframes logoBadgePulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.25);
+  }
+  50% {
+    box-shadow: 0 6px 22px rgba(234, 88, 12, 0.48);
+  }
+}
+
+@keyframes logoSheen {
+  0% {
+    transform: rotate(25deg) translateY(-120%);
+  }
+  25%, 100% {
+    transform: rotate(25deg) translateY(120%);
+  }
+}
+
+@keyframes dumbbellCurl {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.25) rotate(45deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 
 .logo-text {

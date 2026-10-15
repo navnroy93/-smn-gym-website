@@ -848,3 +848,103 @@ async function deleteVideo(videoId) {
 // Initialize video playlist on start
 fetchGymVideos();
 
+// ============================================================
+// ANIMATED BROWSER TAB FAVICON (CHROME COMPATIBLE WORKOUT MOTION)
+// ============================================================
+function initAnimatedFavicon() {
+  try {
+    // Remove static icon tags to ensure Chrome updates smoothly
+    document.querySelectorAll("link[rel*='icon']").forEach(el => {
+      if (el.id !== 'dynamicFavicon') {
+        el.remove();
+      }
+    });
+
+    const canvas = document.createElement('canvas');
+    canvas.width = 32;
+    canvas.height = 32;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let frame = 0;
+
+    function renderFrame() {
+      frame = (frame + 1) % 40;
+      const progress = frame / 40;
+      
+      // Pronounced lifting reps & tilt motion
+      const yLift = -Math.sin(progress * Math.PI * 2) * 3.5; // -3.5px lift
+      const angleDeg = Math.sin(progress * Math.PI * 2) * 28; // ±28 degree curl
+
+      ctx.clearRect(0, 0, 32, 32);
+
+      // Rounded vibrant gradient badge background
+      const r = 8;
+      ctx.beginPath();
+      ctx.moveTo(r, 0);
+      ctx.lineTo(32 - r, 0);
+      ctx.quadraticCurveTo(32, 0, 32, r);
+      ctx.lineTo(32, 32 - r);
+      ctx.quadraticCurveTo(32, 32, 32 - r, 32);
+      ctx.lineTo(r, 32);
+      ctx.quadraticCurveTo(0, 32, 0, 32 - r);
+      ctx.lineTo(0, r);
+      ctx.quadraticCurveTo(0, 0, r, 0);
+      ctx.closePath();
+
+      const grad = ctx.createLinearGradient(0, 0, 32, 32);
+      grad.addColorStop(0, '#f59e0b');
+      grad.addColorStop(1, '#ea580c');
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Draw dumbbell in center with lift and curl motion
+      ctx.save();
+      ctx.translate(16, 16 + yLift);
+      ctx.rotate((angleDeg * Math.PI) / 180);
+
+      ctx.fillStyle = '#ffffff';
+
+      // Barbell shaft
+      ctx.fillRect(-8, -2, 16, 4);
+
+      // Left inner & outer weights
+      ctx.fillRect(-10, -5, 2.5, 10);
+      ctx.fillRect(-13.5, -7, 2.5, 14);
+
+      // Right inner & outer weights
+      ctx.fillRect(7.5, -5, 2.5, 10);
+      ctx.fillRect(11, -7, 2.5, 14);
+
+      ctx.restore();
+
+      // Chrome requires replacing the link node to repaint the tab icon
+      const dataUri = canvas.toDataURL('image/png');
+      const oldLink = document.getElementById('dynamicFavicon');
+      const newLink = document.createElement('link');
+      newLink.id = 'dynamicFavicon';
+      newLink.rel = 'icon';
+      newLink.type = 'image/png';
+      newLink.href = dataUri;
+
+      if (oldLink && oldLink.parentNode) {
+        oldLink.parentNode.replaceChild(newLink, oldLink);
+      } else {
+        document.head.appendChild(newLink);
+      }
+    }
+
+    // Run animation cycle every 120ms (approx 8.3 fps, ideal for browser tab repaints)
+    setInterval(renderFrame, 120);
+    renderFrame();
+  } catch (err) {
+    console.warn('Animated favicon not supported:', err);
+  }
+}
+
+if (document.readyState === 'complete') {
+  initAnimatedFavicon();
+} else {
+  window.addEventListener('load', initAnimatedFavicon);
+}
+
